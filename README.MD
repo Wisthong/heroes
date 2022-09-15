@@ -1,2 +1,2 @@
 # Frontend aplicación heroes
-https://appheroesvite.netlify.app/inicio
+https://appheroesvite.netlify.app
