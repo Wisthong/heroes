@@ -11,7 +11,7 @@ export const LoginPage = () => {
 
   return (
     <div className="flex h-screen justify-center items-center">
-      <button onClick={logIn} className="bg-orange-600 py-2 px-4 rounded font-bold">
+      <button onClick={logIn} className="bg-orange-600 py-2 px-4 rounded font-bold animate__animated animate__infinite animate__pulse">
         Ingresar 😎
       </button>
     </div>

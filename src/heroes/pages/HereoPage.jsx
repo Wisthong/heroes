@@ -29,7 +29,7 @@ export const HereoPage = () => {
   };
 
   return (
-    <div className="grid sm:grid-cols-1 gap-3 ">
+    <div className="grid sm:grid-cols-1 gap-3 animate__animated animate__fadeInLeftBig">
       <div
         className="w-1/1 sm:w-1/2 grid sm:grid-cols-2 rounded-2xl bg-gray-900 m-8"
         key={getOne.id}
@@ -64,7 +64,7 @@ export const HereoPage = () => {
             {getOne.poderes}
           </div>
 
-          <button onClick={onNavigateBack} className="w-full bg-orange-400 p-2 mt-3 rounded font-bold hover:bg-orange-600">
+          <button onClick={onNavigateBack} className="w-full bg-orange-400 p-2 mt-3 rounded font-bold hover:bg-orange-600 animate__animated animate__infinite animate__tada">
           👈🏾 Regresar 👈🏾
           </button>
         </div>

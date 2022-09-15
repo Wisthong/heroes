@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { heroesApi } from "../../api/HeroesApi";
+import { Loader } from "../components/Loader";
 
 export const DcPage = () => {
   const [getHeroes, setGetHeroes] = useState([]);
@@ -19,10 +20,18 @@ export const DcPage = () => {
     }
   };
 
+  if (!getHeroes.length) {
+    return (
+      <div className="flex justify-center items-center mt-72">
+        <Loader />
+      </div>
+    );
+  }
+
   return (
     <>
       <div className="bg-zinc-500">
-        <h1 className="uppercase font-bold text-center text-6xl pb-5 pt-2">
+        <h1 className="uppercase font-bold text-center text-6xl pb-5 pt-2 animate__animated animate__swing">
           <span className="text-yellow-500">Top 20</span>
           <br /> Mejores heroes de
           <span className="text-yellow-500"> DC</span>
@@ -45,7 +54,7 @@ export const DcPage = () => {
                   {heroe.descripcion.substring(0, 200).concat("...")}
                 </p>
                 <Link to={`/heroe/${heroe.id}`}>
-                  <button className="w-full bg-orange-400 p-2 mt-3 rounded font-bold hover:bg-orange-600">
+                  <button className="w-full bg-orange-400 p-2 mt-3 rounded font-bold hover:bg-orange-600 animate__animated animate__infinite animate__pulse">
                     Ver perfil
                   </button>
                 </Link>
